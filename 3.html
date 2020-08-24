@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar VueJS</title>
+</head>
+<body>
+
+	<div id="app">
+		<!-- Data Binding -->
+		<img v-bind:src="img" width="250"><br><br>
+		<a v-bind:href="link" target="_blank">VueJS</a>
+		<p v-bind:style="textStyle">Text Style</p>
+
+
+		<!-- Event Binding -->
+		<button v-on:click="message = 'This button has been clicked.' ">Click</button>
+		<button @click="clear">Clear</button>
+		<button v-on:click="alert">Alert</button>
+		<p>{{ message }}</p>
+
+
+		<input type="text" id="phone" @keyup="pressKey" v-model:value="phone" placeholder="Phone Number">
+	</div>
+
+	<!-- Assets -->
+	<script src="assets/vendor/vue.js"></script>
+	<script src="assets/js/3.js"></script>
+</body>
+</html>

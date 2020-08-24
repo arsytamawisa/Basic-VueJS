@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar VueJS</title>
+</head>
+<body>
+
+	<div id="app">
+
+		<!-- If Else -->
+		<p v-if="show !== 'ready' ">{{ message }}</p>
+		<p v-else="show">{{ message2 }}</p>
+
+
+		<!-- Computed Properties-->
+		<p>{{ int1 }} + {{ int2 }} = {{ sumComputed }}</p>
+		<br>
+
+
+		<!-- Method Properties-->
+		<p>{{ int3 }} + {{ int4 }} + 3 = {{ resultSum }}</p>
+		<button v-on:click="sumMethod(3)">Proccess</button>
+		<br><br><br>
+
+
+		<!-- Watch Properties -->
+		<label>Kilometers</label><br>
+		<input type="text" v-model="km">
+		<br><br>
+		<label>Meters</label><br>
+		<input type="text" v-model="m">
+
+	</div>
+
+	<!-- Assets -->
+	<script src="assets/vendor/vue.js"></script>
+	<script src="assets/js/1.js"></script>
+</body>
+</html>

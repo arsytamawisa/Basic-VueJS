@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar VueJS</title>
+</head>
+<body>
+
+	<div id="app">
+
+		<ul>
+			<li v-for="(fruit, index) in fruits">
+				<button @click="removeFruit(index)">x</button>
+				{{ fruit }}
+			</li>
+		</ul>
+
+		<input type="text" v-model="fruit" placeholder="fruit">
+		<button @click="addFruit" v-bind:disabled="fruit.length < 1">Add</button>
+		<br><br>
+
+		<p>Name: {{ programmer.firstName + " " + programmer.lastName }}</p>
+		<p>Age: {{ programmer.age }}</p>
+
+		<ul>
+			<li v-for="(skill, index) in skills">
+				Language {{ skill.language }}, v{{ skill.version }}, Framework {{ skill.framework }}
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- Assets -->
+	<script src="assets/vendor/vue.js"></script>
+	<script src="assets/js/4.js"></script>
+</body>
+</html>

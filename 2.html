@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar VueJS</title>
+</head>
+<body>
+
+	<div id="app">
+		<h2>VueJS</h2>
+		<!-- Directive Model Binding -->
+
+		<input type="text" v-model="message"><br>
+		<p>{{ message }}</p>
+
+		<textarea rows="5" cols="25" v-model="textarea"></textarea><br>
+		<p style="white-space: pre-line">{{ textarea }}</p>
+
+		<input type="radio" v-model="radio" value="Kampret">
+		<label>Kampret</label><br>
+		<input type="radio" v-model="radio" value="Cebong">
+		<label>Cebong</label>
+		<p>Your choise is {{ radio }}</p><br>
+
+		<p>Your hobby is : {{ mCheckbox }}</p>
+		<p v-for="choice in checkbox">{{ choice }}</p>
+		<input type="checkbox" value="Watching Movies" v-model="checkbox">
+		<label>Watching Movies</label><br>
+		<input type="checkbox" value="Playing Games" v-model="checkbox">
+		<label>Playing Games</label><br>
+		<input type="checkbox" value="Travelling" v-model="checkbox">
+		<label>Travelling</label><br><br>
+
+
+		<select v-model="select">
+			<option value="">-- Programming Language --</option>
+			<option value="PHP">PHP</option>
+			<option value="Javascript">Javascript</option>
+			<option value="Python">Python</option>
+			<option value="Kotlin">Kotlin</option>
+		</select><br>
+		<p>Your Programming Language is: {{ select }}</p>
+	</div>
+
+	<!-- Assets -->
+	<script src="assets/vendor/vue.js"></script>
+	<script src="assets/js/2.js"></script>
+</body>
+</html>
